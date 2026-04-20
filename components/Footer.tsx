@@ -22,11 +22,11 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center items-center gap-8 mb-8 text-sm text-gray-300">
           <div className="flex items-center space-x-2">
             <span className="text-orange-500">📍</span>
-            <span>734 S Charlotte St, Lombard, IL 60148</span>
+            <span>734 S Charlotte St, Lombard, IL 60148</span>    
           </div>
           <div className="flex items-center space-x-2">
             <span className="text-orange-500">📧</span>
-            <span>info@dsurfcorp.net</span>
+            <span>info@issbah-aairah.com</span>
           </div>
           <div className="flex items-center space-x-2">
             <span className="text-orange-500">📱</span>
@@ -37,7 +37,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>Copyright © 2026 dsurfcorp. All Rights Reserved.</p>
+            <p>Copyright © 2026 issbah-aairah. All Rights Reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="/privacy" className="text-orange-500 hover:text-orange-400 transition">
                 Privacy Policy

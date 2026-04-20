@@ -37,3 +37,7 @@ public/images/GettyImages-1311462781.mov
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local env files (never commit secrets)
+.env
+.env*.local
