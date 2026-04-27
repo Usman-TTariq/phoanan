@@ -24,17 +24,17 @@ export default function Footer() {
           >
             Terms of Service
           </Link>
-          <Link
+          {/* <Link
             href="/#services"
             className="text-slate-400 hover:text-[#fd761a] transition-colors duration-300 opacity-90 hover:opacity-100"
           >
             Case Studies
-          </Link>
+          </Link> */}
           <OpenHireModalButton className="inline text-slate-400 hover:text-[#fd761a] transition-colors duration-300 opacity-90 hover:opacity-100 bg-transparent border-0 p-0 cursor-pointer font-inherit text-sm leading-relaxed">
             Careers
           </OpenHireModalButton>
         </div>
-        <div className="flex gap-4">
+        {/* <div className="flex gap-4">
           <a
             className="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:border-[#fd761a] hover:text-[#fd761a] transition-all"
             href="#"
@@ -49,7 +49,7 @@ export default function Footer() {
           >
             <span className="material-symbols-outlined text-[20px]">share</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

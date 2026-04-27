@@ -24,12 +24,12 @@ export default function Hero() {
               Start Your Project
               <span className="material-symbols-outlined">arrow_forward</span>
             </OpenHireModalButton>
-            <Link
+            {/* <Link
               href="/#services"
               className="inline-flex items-center justify-center border-2 border-black text-black px-8 py-4 rounded-lg text-base font-semibold hover:bg-black hover:text-white transition-all active:scale-95"
             >
               View Case Studies
-            </Link>
+            </Link> */}
           </div>
           <div className="flex items-center gap-6 pt-4">
             <div className="flex -space-x-3">

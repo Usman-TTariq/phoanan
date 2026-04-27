@@ -52,7 +52,7 @@ export default function HomeCta() {
               Ready to scale your <span className="text-[#fd761a]">digital ecosystem?</span>
             </h2>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              We&apos;re currently accepting new projects for Q4 2024. Let&apos;s discuss how we can transform your
+              We&apos;re currently accepting new projects for Q4 2026. Let&apos;s discuss how we can transform your
               business through elite technology.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
