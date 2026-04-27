@@ -34,11 +34,11 @@ export default function Navbar() {
           aria-label="Phoanan.us home"
         >
           <Image
-            src="/images/logo.png"
+            src="/images/logo1.png"
             alt="Phoanan.us"
             width={1000}
             height={1000}
-            className="h-8 sm:h-[90px] w-auto max-w-[140px] sm:max-w-[260px] object-contain object-left"
+            className="h-8 sm:h-[50px] w-auto max-w-[140px] sm:max-w-[240px] object-contain object-left"
             priority
           />
         </Link>
