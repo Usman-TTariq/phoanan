@@ -5,11 +5,28 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 dark:bg-black w-full py-16 border-t border-slate-800 font-manrope text-sm leading-relaxed">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row md:justify-between md:items-center gap-8">
-        <div className="space-y-4">
+        <div className="space-y-4 max-w-2xl">
           <div className="text-xl font-bold text-white">Phoanan.us</div>
-          <p className="text-slate-400 max-w-xs">
+          <p className="text-slate-400">
             © {new Date().getFullYear()} Phoanan.us Digital Solutions Agency. Built for premium reliability.
           </p>
+          <div className="flex flex-col gap-4 pt-1 text-slate-400 sm:flex-row sm:items-start sm:gap-10">
+            <div className="shrink-0">
+              <a
+                href="mailto:info@phoanan.us"
+                className="text-slate-300 hover:text-[#fd761a] transition-colors underline-offset-2 hover:underline"
+              >
+                info@phoanan.us
+              </a>
+            </div>
+            <p className="leading-relaxed sm:border-l sm:border-slate-700 sm:pl-10">
+              Price Rite Market Place
+              {/* <br /> */}
+              325 Valley St
+              <br />
+              Providence, RI 02908
+            </p>
+          </div>
         </div>
         <div className="flex flex-wrap gap-8">
           <Link

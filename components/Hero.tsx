@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[min(921px,100svh)] flex items-center pt-8 pb-16 overflow-hidden bg-[#f7f9fb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10 w-full">
-        <div className="space-y-8">
+        <div className="space-y-8">  
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#ffdbca] text-[#5c2400] text-sm font-semibold tracking-wide">
             <span className="material-symbols-outlined mr-2 text-[18px]">rocket_launch</span>
             Empowering US Enterprise
