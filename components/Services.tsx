@@ -1,75 +1,68 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const cards = [
+  {
+    icon: "language",
+    title: "Web Development",
+    body: "Responsive, high-speed websites tailored for conversion and global brand presence. Built on modern stacks for scalability.",
+    bullets: ["React & Next.js", "SEO Optimization", "E-commerce Platforms"],
+  },
+  {
+    icon: "smartphone",
+    title: "App Development",
+    body: "Native and cross-platform mobile experiences that users love. We focus on seamless UX and high-performance code.",
+    bullets: ["iOS & Android", "Flutter & React Native", "User-Centric Design"],
+  },
+  {
+    icon: "terminal",
+    title: "Enterprise Systems",
+    body: "Complex SaaS products and internal business tools designed for security, integration, and high availability.",
+    bullets: ["SaaS Architecture", "API Integrations", "Cloud Infrastructure"],
+  },
+] as const;
 
 export default function Services() {
-  const services = [
-    {
-      title: "Logo & Branding",
-      description: "Creating unique and memorable brand identities that resonate with your target audience and set you apart from competitors.",
-      icon: "/images/Earnytics LLc Icon/Logo & branding.png",
-      gradient: "from-pink-500 to-rose-500"
-    },
-    {
-      title: "Website Design",
-      description: "Designing beautiful, user-friendly websites that engage visitors and drive conversions with modern aesthetics.",
-      icon: "/images/Earnytics LLc Icon/website design.png",
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Social Media",
-      description: "Building and managing your social media presence to connect with customers and grow your brand online.",
-      icon: "/images/Earnytics LLc Icon/Social media.png",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Content & Copywriting",
-      description: "Crafting compelling content and copy that tells your brand story and engages your audience effectively.",
-      icon: "/images/Earnytics LLc Icon/Content & Copywriting.png",
-      gradient: "from-amber-500 to-orange-500"
-    },
-    {
-      title: "Website Development",
-      description: "Building robust, scalable web applications using cutting-edge technologies and best practices.",
-      icon: "/images/Earnytics LLc Icon/Website Devlop.png",
-      gradient: "from-emerald-500 to-teal-500"
-    },
-    {
-      title: "Hosting & Maintenance",
-      description: "Providing reliable hosting solutions and ongoing maintenance to keep your website running smoothly 24/7.",
-      icon: "/images/Earnytics LLc Icon/Hosting & maintenance.png",
-      gradient: "from-indigo-500 to-purple-500"
-    }
-  ];
-
   return (
-    <section id="services" className="py-20 bg-white scroll-mt-20">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-orange-500 text-sm font-medium mb-2 uppercase tracking-wide">
-            What We Do
-          </p>
-          <h2 className="text-4xl font-bold text-gray-900">Our Services</h2>
+    <section id="services" className="py-16 bg-white scroll-mt-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="max-w-2xl">
+            <h2 className="text-sm font-semibold text-[#9d4300] tracking-widest uppercase mb-4 font-manrope">
+              Our Expertise
+            </h2>
+            <h3 className="font-manrope text-3xl sm:text-5xl font-bold text-black leading-tight">
+              Precision-Built Solutions for a Global Market.
+            </h3>
+          </div>
+          <div className="pb-2">
+            <Link
+              href="/#services"
+              className="text-black font-semibold text-sm border-b-2 border-black pb-1 hover:text-[#9d4300] hover:border-[#9d4300] transition-all inline-block"
+            >
+              Explore All Services
+            </Link>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index}
-              className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-orange-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {cards.map((card) => (
+            <div
+              key={card.title}
+              className="group p-10 rounded-xl bg-[#f7f9fb] border border-black/5 hover:bg-white hover:shadow-2xl transition-all duration-300"
             >
-              <div className={`w-20 h-20 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg p-3`}>
-                <Image 
-                  src={service.icon} 
-                  alt={service.title}
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-contain"
-                />
+              <div className="w-16 h-16 rounded-xl bg-[#ffdbca] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-[#9d4300] text-3xl">{card.icon}</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-500 transition-colors">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              
-              {/* Decorative element */}
-              <div className="mt-6 h-1 w-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-full group-hover:w-full transition-all duration-500"></div>
+              <h4 className="font-manrope text-2xl font-semibold text-black mb-4">{card.title}</h4>
+              <p className="text-[#45464d] mb-8 text-base leading-relaxed">{card.body}</p>
+              <ul className="space-y-3">
+                {card.bullets.map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm font-semibold text-[#191c1e]">
+                    <span className="material-symbols-outlined text-[#9d4300] text-base">check_circle</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

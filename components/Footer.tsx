@@ -1,75 +1,56 @@
-"use client";
-
-import BrandWordmark from "./BrandWordmark";
+import Link from "next/link";
+import OpenHireModalButton from "@/components/OpenHireModalButton";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <footer className="bg-gradient-to-br from-navy-900 to-navy-800 text-white py-12">
-      <div className="container mx-auto px-6">
-        {/* Logo Section */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center mb-6">
-            <BrandWordmark className="text-2xl sm:text-3xl md:text-4xl" />
-          </div>
-          <p className="text-sm text-orange-500 uppercase tracking-wider">Digital Solutions</p>
+    <footer className="bg-slate-900 dark:bg-black w-full py-16 border-t border-slate-800 font-manrope text-sm leading-relaxed">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row md:justify-between md:items-center gap-8">
+        <div className="space-y-4">
+          <div className="text-xl font-bold text-white">Phoanan.us</div>
+          <p className="text-slate-400 max-w-xs">
+            © {new Date().getFullYear()} Phoanan.us Digital Solutions Agency. Built for premium reliability.
+          </p>
         </div>
-
-        {/* Contact Info */}
-        <div className="flex flex-wrap justify-center items-center gap-8 mb-8 text-sm text-gray-300">
-          <div className="flex items-center space-x-2">
-            <span className="text-orange-500">📍</span>
-            <span>734 S Charlotte St, Lombard, IL 60148</span>    
-          </div>
-          <div className="flex items-center space-x-2">
-            <span className="text-orange-500">📧</span>
-            <span>info@phoanan.com</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <span className="text-orange-500">📱</span>
-            <span>+1 (847) 208-7685</span>
-          </div>
+        <div className="flex flex-wrap gap-8">
+          <Link
+            href="/privacy"
+            className="text-slate-400 hover:text-[#fd761a] transition-colors duration-300 opacity-90 hover:opacity-100"
+          >
+            Privacy Policy
+          </Link>
+          <Link
+            href="/terms"
+            className="text-slate-400 hover:text-[#fd761a] transition-colors duration-300 opacity-90 hover:opacity-100"
+          >
+            Terms of Service
+          </Link>
+          <Link
+            href="/#services"
+            className="text-slate-400 hover:text-[#fd761a] transition-colors duration-300 opacity-90 hover:opacity-100"
+          >
+            Case Studies
+          </Link>
+          <OpenHireModalButton className="inline text-slate-400 hover:text-[#fd761a] transition-colors duration-300 opacity-90 hover:opacity-100 bg-transparent border-0 p-0 cursor-pointer font-inherit text-sm leading-relaxed">
+            Careers
+          </OpenHireModalButton>
         </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>Copyright © 2026 phoanan. All Rights Reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy" className="text-orange-500 hover:text-orange-400 transition">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-orange-500 hover:text-orange-400 transition">
-                Terms & Conditions
-              </a>
-            </div>
-          </div>
+        <div className="flex gap-4">
+          <a
+            className="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:border-[#fd761a] hover:text-[#fd761a] transition-all"
+            href="#"
+            aria-label="Network"
+          >
+            <span className="material-symbols-outlined text-[20px]">hub</span>
+          </a>
+          <a
+            className="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center text-white hover:border-[#fd761a] hover:text-[#fd761a] transition-all"
+            href="#"
+            aria-label="Share"
+          >
+            <span className="material-symbols-outlined text-[20px]">share</span>
+          </a>
         </div>
       </div>
-
-      {/* Back to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-orange-500 hover:bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 z-50"
-        aria-label="Scroll to top"
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 10l7-7m0 0l7 7m-7-7v18"
-          />
-        </svg>
-      </button>
     </footer>
   );
 }

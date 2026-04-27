@@ -1,4 +1,5 @@
 import Image from "next/image";
+import OpenHireModalButton from "@/components/OpenHireModalButton";
 
 export default function Portfolio() {
   const portfolioItems = [
@@ -93,11 +94,9 @@ export default function Portfolio() {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <p className="text-gray-300 mb-6">Ready to bring your vision to life?</p>
-          <a href="/contact">
-            <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-              Start Your Project Today
-            </button>
-          </a>
+          <OpenHireModalButton className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            Start Your Project Today
+          </OpenHireModalButton>
         </div>
       </div>
     </section>

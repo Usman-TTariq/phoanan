@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PopupModal from "./PopupModal";
+import { useHireModal } from "./HireModalContext";
 import Image from "next/image";
 
 const BASE_FEATURES = [
@@ -20,6 +21,7 @@ function getFeatures(deliveryDays: number) {
 }
 
 export default function Pricing() {
+  const { open: openHireModal } = useHireModal();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const plans = [
@@ -224,11 +226,13 @@ export default function Pricing() {
             Join hundreds of successful businesses using phoanan
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="/contact">
-              <button className="bg-white text-orange-500 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all">
-                Start Free Trial
-              </button>
-            </a>
+            <button
+              type="button"
+              onClick={openHireModal}
+              className="bg-white text-orange-500 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all"
+            >
+              Start Free Trial
+            </button>
             <button 
               onClick={() => setIsPopupOpen(true)}
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/10 transition-all"

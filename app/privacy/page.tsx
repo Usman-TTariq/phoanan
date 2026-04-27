@@ -7,7 +7,7 @@ export default function PrivacyPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-navy-900 to-navy-800 text-white py-20 mt-20">
+      <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold mb-4">Privacy Policy</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
