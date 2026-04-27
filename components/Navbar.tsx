@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useHireModal } from "./HireModalContext";
@@ -27,8 +28,19 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-900/5 dark:border-slate-50/5 shadow-sm font-manrope tracking-tight">
       <div className="flex items-center max-w-7xl mx-auto px-4 sm:px-8 h-20 gap-4">
-        <Link href="/" className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white shrink-0">
-          Phoanan.us
+        <Link
+          href="/"
+          className="shrink-0 flex items-center py-1 hover:opacity-90 transition-opacity"
+          aria-label="Phoanan.us home"
+        >
+          <Image
+            src="/images/logo.png"
+            alt="Phoanan.us"
+            width={1000}
+            height={1000}
+            className="h-8 sm:h-[90px] w-auto max-w-[140px] sm:max-w-[260px] object-contain object-left"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex flex-1 items-center justify-center gap-8 min-w-0">

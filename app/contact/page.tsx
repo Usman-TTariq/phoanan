@@ -41,8 +41,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Our Office</h3>
                     <p className="text-white/90">
-                      734 S Charlotte St<br />
-                      Lombard, IL 60148
+                      Price Rite Market Place<br />
+                      325 Valley St<br />
+                      Providence, RI 02908
                     </p>
                   </div>
                 </div>
@@ -54,8 +55,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Email Us</h3>
-                    <a href="mailto:info@earnytics.com" className="text-white/90 hover:text-white transition">
-                      info@earnytics.com
+                    <a href="mailto:info@phoanan.us" className="text-white/90 hover:text-white transition">
+                      info@phoanan.us
                     </a>
                   </div>
                 </div>
@@ -67,8 +68,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Call Us</h3>
-                    <a href="tel:+18472087685" className="text-white/90 hover:text-white transition">
-                      +1 (847) 208-7685
+                    <a href="tel:+12107423755" className="text-white/90 hover:text-white transition">
+                      (210) 742-3755
                     </a>
                   </div>
                 </div>
@@ -125,13 +126,13 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Map Section - 734 S Charlotte St, Lombard, IL 60148 */}
+        {/* Map — Price Rite Market Place, 325 Valley St, Providence, RI 02908 */}
         <div className="mt-20 max-w-6xl mx-auto">
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
             <div className="aspect-video w-full">
               <iframe
-                title="phoanan - 734 S Charlotte St, Lombard, IL 60148"
-                src="https://maps.google.com/maps?q=734+S+Charlotte+St,+Lombard,+IL+60148&z=15&output=embed"
+                title="phoanan — Price Rite Market Place, 325 Valley St, Providence, RI 02908"
+                src="https://maps.google.com/maps?q=325+Valley+St,+Providence,+RI+02908&z=15&output=embed"
                 className="w-full h-full border-0"
                 allowFullScreen
                 loading="lazy"
@@ -139,7 +140,9 @@ export default function ContactPage() {
               />
             </div>
             <div className="p-4 text-center border-t border-gray-100">
-              <p className="text-gray-600 font-medium">734 S Charlotte St, Lombard, IL 60148</p>
+              <p className="text-gray-600 font-medium">
+                Price Rite Market Place, 325 Valley St, Providence, RI 02908
+              </p>
             </div>
           </div>
         </div>
