@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitSiteLead } from "@/lib/submit-site-lead";
 import { useHireModal } from "./HireModalContext";
 
 export default function HomeCta() {
@@ -16,20 +17,16 @@ export default function HomeCta() {
     setStatus("sending");
     setErrorMessage("");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-          source: "home_cta",
-        }),
+      const result = await submitSiteLead({
+        name,
+        email,
+        phone: "— (Quick Contact — phone not collected on this form)",
+        message,
+        source: "home_quick_contact",
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
+      if (!result.ok) {
         setStatus("error");
-        setErrorMessage(typeof data.error === "string" ? data.error : "Something went wrong. Please try again.");
+        setErrorMessage(result.error);
         return;
       }
       setStatus("success");

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { submitSiteLead } from "@/lib/submit-site-lead";
 
 type HireDevelopersModalProps = {
   isOpen: boolean;
@@ -38,22 +39,17 @@ export default function HireDevelopersModal({ isOpen, onClose }: HireDevelopersM
     const fullMessage =
       parts.join("\n\n").trim() || "App development callback requested (hire developers modal).";
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          service: company.trim() || "App development inquiry",
-          message: fullMessage,
-          source: "navbar_hire_developers",
-        }),
+      const result = await submitSiteLead({
+        name,
+        email,
+        phone,
+        message: fullMessage,
+        source: "hire_developers_modal",
+        company: company.trim() || undefined,
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
+      if (!result.ok) {
         setStatus("error");
-        setErrorMessage(typeof data.error === "string" ? data.error : "Something went wrong. Please try again.");
+        setErrorMessage(result.error);
         return;
       }
       setStatus("success");
